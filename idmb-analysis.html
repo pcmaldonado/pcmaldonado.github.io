@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Clean Blog - Start Bootstrap Theme</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="index.html">Data Science</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="projects.html">Projects</a></li>i>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('assets/img/imdb-analysis.jpg')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="post-heading">
+                            <h1>IMDb - <br>Exploratory Data Analysis</h1>
+                            <!-- <h2 class="subheading">From data collection to deployment</h2> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Post Content-->
+        <article class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <h2> Exploring the IMDb datasets</h2>
+                        <p>The code used for the anaysis is available <a href="https://github.com/pcmaldonado/IMDb_data_analysis">here</a>.<br><br>
+
+                            <h3>Overview</h3>
+                            <br>
+                            
+                            <details>
+                                <summary><b>Stored the IMDb datasets in a local database using MSSQL, Microsoft Visual Studio 2019 and the SSIS toolbox</b></summary>                            
+                                <img style="max-width:100%" src="https://raw.githubusercontent.com/pcmaldonado/IMDb_data_analysis/main/Preprocessing/RelationalDatabaseSchema.png" alt="">
+                            </details>
+                            <br>
+                            
+                            <details>
+                                <summary><b>Explored the number of votes and their relationship with ratings</b></summary>                            
+                                <img style="max-width:100%" src="https://github.com/pcmaldonado/IMDb/raw/main/EDA/numVotes_rating.png" alt="">
+                            </details>
+                            <br>
+
+                            <details>
+                                <summary><b>Explore the best titles per type in the IMDb dataset (among others) </b></summary>
+                                From the available data in the inner join of tables “title_basics” and “title_ratings”, and considering only titles with more than 50K votes, the best titles per title type are: <br>
+                                    
+                                <table><tr>
+                                <th>tconst</th>
+                                <th>titleType</th>
+                                <th>primaryTitle</th>
+                                <th>averageRating</th>
+                                <th>numVotes</th>
+                                </tr><tr>
+                                    
+                                <td>tt0111161</td>
+                                <td>movie</td>
+                                <td>The Shawshank Redemption</td>
+                                <td>9,3</td>
+                                <td>2,523,946</td>
+                                </tr><tr>
+                                    
+                                <td>tt15097216</td>
+                                <td>movie</td>
+                                <td>Jai Bhim</td>
+                                <td>9,3</td>
+                                <td>166,667</td>
+                                </tr><tr>
+                                    
+                                <td>tt0108598</td>
+                                <td>short</td>
+                                <td>The Wrong Trousers</td>
+                                <td>8,3</td>
+                                <td>53,272</td>
+                                </tr><tr>
+                                    
+                                <td>tt2301451</td>
+                                <td>tvEpisode</td>
+                                <td>Ozymandias</td>
+                                <td>10</td>
+                                <td>149,682</td>
+                                </tr><tr>
+                                    
+                                <td>tt5491994</td>
+                                <td>tvMiniSeries</td>
+                                <td>Planet Earth II</td>
+                                <td>9,5</td>
+                                <td>107,823</td>
+                                </tr><tr>
+                                    
+                                <td>tt0067023</td>
+                                <td>tvMovie</td>
+                                <td>Duel</td>
+                                <td>7,6</td>
+                                <td>68,641</td>
+                                </tr><tr>
+                                    
+                                <td>tt14392248</td>
+                                <td>tvSeries</td>
+                                <td>Aspirants</td>
+                                <td>9,6</td>
+                                <td>290,200</td>
+                                </tr><tr>
+                                    
+                                <td>tt14650074</td>
+                                <td>tvSeries</td>
+                                <td>Dhindora</td>
+                                <td>9,6</td>
+                                <td>111,317</td>
+                                </tr><tr>
+                                    
+                                <td>tt11337862</td>
+                                <td>tvSpecial</td>
+                                <td>Friends: The Reunion</td>
+                                <td>8,1</td>
+                                <td>55,145</td>
+                                </tr><tr>
+                                    
+                                <td>tt1569923</td>
+                                <td>video</td>
+                                <td>Batman: Under the Red Hood</td>
+                                <td>8,1</td>
+                                <td>59,376</td>
+                                </tr><tr>
+                                    
+                                <td>tt2140553</td>
+                                <td>videoGame</td>
+                                <td>The Last of Us</td>
+                                <td>9,7</td>
+                                <td>56,588</td>
+                                </tr></table>
+                                
+                                </details>
+
+                            <br>
+                            <details>
+                                <summary><b>Created a dashboard showing the evolution of genre development through time</b></summary>                            
+                                <img style="max-width:100%" src="https://github.com/pcmaldonado/IMDb/raw/main/EDA/tot_titles_genre_year.gif" alt="">
+                            </details>
+                            <br>
+                
+
+                            
+
+                       <p>For more details, check the <a href="https://github.com/pcmaldonado/IMDb_data_analysis">GitHub repository</a></p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- Footer-->
+        <footer class="border-top">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <ul class="list-inline text-center">
+                            <li class="list-inline-item">
+                                <a href="https://medium.com/@pcmaldonado">
+                                    <span class="fa-stack fa-lg">
+                                        <img class="medium"src="/assets/img/icons8-medium-64.png"/>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://linkedin.com/in/pcmaldonado">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-linkedin-in fa-stack-1x fa-inverse" style="color:white"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://github.com/pcmaldonado/projects">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="small text-center text-muted fst-italic">Copyright &copy; pcmaldonado 2021</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
