@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Price estimator</title>
+        <title>Customer Churn</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
@@ -34,13 +34,13 @@
             </div>
         </nav>
         <!-- Page Header-->
-        <header class="masthead" style="background-image: url('assets/img/price-estimator.jpg')">
+        <header class="masthead" style="background-image: url('assets/img/customer-churn.jpg')">
             <div class="container position-relative px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="post-heading">
-                            <h1>Price estimator</h1>
-                            <h2 class="subheading">From data collection to deployment</h2>
+                            <h1>Customer Churn - <br>Classification</h1>
+                            <!-- <h2 class="subheading">...</h2> -->
                         </div>
                     </div>
                 </div>
@@ -51,22 +51,41 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
-                        <h2> Predicting Used Car Prices 🏎️ 🚗 🚙</h2>
-                        <p>The model is currently deployed on <a href="https://estimateur-prix-voiture.herokuapp.com/">Heroku</a> (in french), 
-                            <br>The code used for the anaysis is available <a href="https://github.com/pcmaldonado/Predicting_used_cars_price">here</a>,
-                            <br> And the deployment repository is available <a href="https://github.com/pcmaldonado/Estimateur_prix_voiture">here</a>.<br><br>
-
+                        <h2>Predicting Customer Churn</h2>
+                        <p>The code used for the anaysis is available on <a href="https://github.com/pcmaldonado/CustomerChurn">GitHub</a>.<br>
+                        <p>The data is available on <a href="https://www.kaggle.com/ankitverma2010/ecommerce-customer-churn-analysis-and-prediction">Kaggle</a> and contains information of more than 5,600 different customers of an e-commerce company</p>    
+                        <br>
                             <h3>Overview</h3>
+                            <br>
                             <ul>
-                                <li>Created a tool that estimates the selling price of used cars to help people evaluate their cars before selling or buying one</li>
-                                <li>Scraped around 50,000 ads of selling cars from a popular french website using python (BeautifulSoup)</li>
-                                <li>Engineered features from additional scraped data on brands (luxury brands & origin)</li>
-                                <li>Explored 9 different models, then applied GridsearchCV to the better performing ones to get the best model</li>
-                                <li>Built a client facing site using Flask that lets users input car features to get an estimate of its selling price</li>
+                                <li>Analysed the data (distributions, type of data, missing values) and studied the relationship between the features and the average churn rate of an e-commerce</li>
+                                <li>Preprocessed the data to be able to apply a machine learning model</li>
+                                <li>Studied more than 10 classification algorithms, from simple models like Logistic Regression to ensemble methods like Random Forest or XGBoosting as well as combinations of models using Voting classifiers and Stacking classifiers</li>
+                                <li>Optimised the hyperparameters from the best performing models using 10-fold cross validation</li>
+                                <li>Created a pipeline able to preprocess and predict on new data</li>
+                                <li>Achieved high performance on test data:</li>
+                                    <table>
+                                        <tr>
+                                            <th>Base Model</th>
+                                            <th>Accuracy</th>
+                                            <th>Precision</th>
+                                            <th>Recall</th>
+                                        </tr>
+                                        <tr>
+                                            <td>XGBClassifier</td>
+                                            <td>98.13%</td>
+                                            <td>97.13%</td>
+                                            <td>91.35%</td>
+                                        </tr>
+                                    </table>
                             </ul>
+                            
+                            <br>
+                            <img src="https://github.com/pcmaldonado/CustomerChurn/blob/main/conf_matrix.png">
 
-
-                       <p>For more details, check the <a href="https://github.com/pcmaldonado/Predicting_used_cars_price">GitHub repository</a></p>
+                            <br>
+                
+                       <p>For more details, check the <a href="https://github.com/pcmaldonado/CustomerChurn">GitHub repository</a></p>
                     </div>
                 </div>
             </div>
