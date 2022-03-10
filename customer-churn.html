@@ -62,8 +62,9 @@
                                 <li>Preprocessed the data to be able to apply a machine learning model</li>
                                 <li>Studied more than 10 classification algorithms, from simple models like Logistic Regression to ensemble methods like Random Forest or XGBoosting as well as combinations of models using Voting classifiers and Stacking classifiers</li>
                                 <li>Optimised the hyperparameters from the best performing models using 10-fold cross validation</li>
-                                <li>Created a pipeline able to preprocess and predict on new data</li>
-                                <li>Achieved high performance on test data:</li>
+                                <li>Combined the finetuned models using a Voting Classifier and a Stacking Classifier</li>
+                                <li>Created a pipeline able to preprocess and predict on new data using a pickled model</li>
+                                <li>Achieved high performance on test data using the Voting Classifier on finetuned models:</li>
                                     <table>
                                         <tr>
                                             <th>Final Model</th>
@@ -72,7 +73,7 @@
                                             <th>Recall</th>
                                         </tr>
                                         <tr>
-                                            <td>XGBClassifier</td>
+                                            <td>Voting Classifier</td>
                                             <td>98.13%</td>
                                             <td>97.13%</td>
                                             <td>91.35%</td>
@@ -81,7 +82,8 @@
                             </ul>
                             
                             <br>
-                            <img src="https://raw.githubusercontent.com/pcmaldonado/CustomerChurn/main/conf_matrix.png">
+                              <img src="https://raw.githubusercontent.com/pcmaldonado/CustomerChurn/main/conf_matrix.png" style="width:90%; margin-left: 3rem;">
+
 
                             <br>
                 
