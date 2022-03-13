@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>IMDb Analysis</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link type="image/png"  href="assets/img/favicon_io/favicon.ico" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+   <!-- Google fonts-->
+   <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+ 
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: BizPage - v5.8.0
+  * Template URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center ">
+    
+    <div class="container-fluid">
+
+      <div class="row justify-content-center align-items-center">
+        <div class="col-xl-11 d-flex align-items-center justify-content-between">
+          <h1 class="logo"><a href="/">Data Science</a></h1>
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+          <nav id="navbar" class="navbar">
+            <ul>
+              <li><a class="nav-link scrollto " href="/">Home</a></li>
+              <li><a class="nav-link  active" href="projects.html">Projects</a></li>
+              <li><a class="nav-link scrollto" href="about.html">About</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav><!-- .navbar -->
+        </div>
+      </div>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+    <div class="article">
+    <!-- ======= Breadcrumbs ======= -->
+    <header class="masthead" style="background-image: url('assets/img/portfolio/imdb-analysis/imdb-analysis.jpg')">
+      <div class="container position-relative px-4 px-lg-5">
+          <div class="row gx-4 gx-lg-5 justify-content-center">
+              <div class="col-md-10 col-lg-8 col-xl-7">
+                  <div class="post-heading">
+                      <h1>IMDb</h1>
+                      <h2 class="subheading">Exploratory Data Analysis</h2>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </header>
+    <!-- End Breadcrumbs -->
+
+ <!-- ======= Blog Single Section ======= -->
+ <section id="blog" class="blog">
+  <div class="container" data-aos="fade-up">
+
+    <div class="row">
+
+      <div class="col-lg-8 entries">
+
+        <article class="entry entry-single">
+          <h2 class="entry-title">
+            Project Overview
+          </h2>
+          <div class="entry-content">
+            <h3>Main Results:</h3>
+            <p>IMDb's revenue comes from both advertisers and its paying members (IMDbPro).</p>
+            <ul>
+              <li><strong>IMDbPro</strong></li>
+                <ul>
+                  <li>The target audience for these members is the more than 4 million actors, nearly 1 million different producers, and hundreds of thousands of writers, 
+                    directors, and other crew members in their database.</li>
+                  <li>People who have worked on big productions like "Avengers: Endgame" or "Game of Thrones" would probably benefit the most from the network's 
+                    capabilities of their paid membership.</li>
+                </ul>
+              <li><strong>IMDb</strong></li>
+                <ul>
+                  <li>Users of IMDb could also benefit from having a robust rating system. Indeed, as of now, titles with a high number of votes tend to have higher ratings, 
+                    which makes the average title rating relatively high (6.62).</li>
+                </ul>
+            </ul>
+
+            <h3 style="padding-top: 4%;">Walkthrough:</h3>
+            <ul>
+                <li>Stored the available IMDb database in a local database using MSSQL, Microsoft Visual Studio 2019 and the SSIS toolbox</li>
+                <li>Created new "working" tables through stored procedures in order to better fit the data types and other specifications</li>
+                <li>Applied a number of queries to better understand the data using MSSQL and Python</li>
+                <li>Created a dashboard on Tableau showing the evolution of genre development through time</li>
+            </ul>
+            
+          
+          <br>
+              <!-- ======= Images ======= -->
+              <section id="portfolio-details" class="portfolio-details">
+                <div class="container">
+                  <div class="row gy-4">
+
+                    <div class="col-lg-8" style="width:100%!important; margin-top: -2rem;">
+                      <div class="portfolio-details-slider swiper">
+                        <div class="swiper-wrapper align-items-center">
+
+                          <div class="swiper-slide">
+                            <img src="assets/img/portfolio/imdb-analysis/RelationalDatabaseSchema.png" alt="">
+                          </div>
+                          
+                          <div class="swiper-slide">
+                            <img src="assets/img/portfolio/imdb-analysis/numVotes_rating.png" alt="">
+                          </div>
+
+                          <div class="swiper-slide">
+                            <img src="assets/img/portfolio/imdb-analysis/tot_titles_genre_year.gif" alt="">
+                          </div>
+
+                        </div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                    </div>
+                    </div>
+                  </section>
+
+                  <br>
+                  <p>For more details, check the <a href="https://github.com/pcmaldonado/IMDb_data_analysis/tree/main/EDA">EDA</a> repo on Github and the 
+                    evolution of genres preferences by country through time on <a href="https://public.tableau.com/app/profile/paula2733/viz/TopGenreCountryYear/Sheet1">Tableau Public</a>!</p>
+          
+        </article><!-- End blog entry -->
+
+
+
+
+      </div><!-- End blog entries list -->
+
+
+
+      <div class="col-lg-4">
+        <div class="sidebar">
+          
+          <div class="portfolio-info">
+            <h3>Project information</h3>
+            <ul>
+              <li><strong>Category: </strong>Exploratory Data Analysis </li>
+              
+              <li><strong>Data: </strong><a href="https://www.imdb.com/interfaces/">IMDb available database</a></li>  
+
+              <li><strong>Motivation: </strong>IMDb (Internet Movie Database) is one of the biggest online databases regarding films, series, video games and others.</li>
+
+              <li><strong>Objective: </strong>Explore the IMDb database</li>  
+
+              <li><strong>Main Tools</strong>: SSIS, MSSQL, Python, Tableau</a></li>
+
+              <li><strong>Code available on: </strong><a href="https://github.com/pcmaldonado/IMDb_data_analysis">Github</a></li>
+            </ul>
+          </div>
+         <!-- End sidebar categories-->
+
+              <br><br>
+
+              <h3 class="sidebar-title">Other Projects</h3>
+              <div class="sidebar-item recent-posts">
+                <div class="post-item clearfix">
+                  <img src="assets/img/portfolio/twitter.jpg" alt="">
+                  <h4><a href="tw-sent-analysis.html">Twitter Sentiment Analysis</a></h4>
+                  <!-- <p style="margin-left: 6rem; font-style: italic;"><small>Python, NLP, BERT, Transformers</small></p> -->
+                </div>
+
+                <div class="post-item clearfix">
+                  <img src="assets/img/portfolio/customer-churn.jpg" alt="">
+                  <h4><a href="customer-churn.html">Customer Churn</a></h4>
+                  <!-- <time datetime="2020-01-01">Jan 1, 2020</time> -->
+                </div>
+
+                <div class="post-item clearfix">
+                    <img src="assets/img/portfolio/price-estimator.jpg" alt="">
+                    <h4><a href="price-estimator.html">Price Estimator</a></h4>
+                    <!-- <time datetime="2020-01-01">Jan 1, 2020</time> -->
+                </div>
+<!-- 
+                <div class="post-item clearfix">
+                  <img src="assets/img/blog/blog-recent-4.jpg" alt="">
+                  <h4><a href="blog-single.html">Laborum corporis quo dara net para</a></h4>
+                  <time datetime="2020-01-01">Jan 1, 2020</time>
+                </div>
+
+                <div class="post-item clearfix">
+                  <img src="assets/img/blog/blog-recent-5.jpg" alt="">
+                  <h4><a href="blog-single.html">Et dolores corrupti quae illo quod dolor</a></h4>
+                  <time datetime="2020-01-01">Jan 1, 2020</time>
+                </div> -->
+
+              </div><!-- End sidebar recent posts-->
+
+
+
+            </div><!-- End sidebar -->
+
+          </div><!-- End blog sidebar -->
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Single Section -->
+    </div>
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <!-- <div class="footer-top">
+    </div> -->
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>pcmaldonado 2022</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!--
+        All the links in the footer should remain intact.
+        You can delete the links only if you purchased the pro version.
+        Licensing information: https://bootstrapmade.com/license/
+        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=BizPage
+      -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- Uncomment below i you want to use a preloader -->
+  <!-- <div id="preloader"></div> -->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
