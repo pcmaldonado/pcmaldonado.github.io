@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Sales Forecasting</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link type="image/png"  href="assets/img/favicon_io/favicon.ico" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+   <!-- Google fonts-->
+   <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+ 
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: BizPage - v5.8.0
+  * Template URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center ">
+    
+    <div class="container-fluid">
+
+      <div class="row justify-content-center align-items-center">
+        <div class="col-xl-11 d-flex align-items-center justify-content-between">
+          <h1 class="logo"><a href="index.html">Data Science</a></h1>
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+          <nav id="navbar" class="navbar">
+            <ul>
+              <li><a class="nav-link scrollto " href="index.html">Home</a></li>
+              <li><a class="nav-link  active" href="projects.html">Projects</a></li>
+              <li><a class="nav-link scrollto" href="about.html">About</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav><!-- .navbar -->
+        </div>
+      </div>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+  <div class="article">
+    <!-- ======= Breadcrumbs ======= -->
+    <header class="masthead" style="background-image: url('assets/img/portfolio/sales-forecasting/sales-forecasting.jpg')">
+      <div class="container position-relative px-4 px-lg-5">
+          <div class="row gx-4 gx-lg-5 justify-content-center">
+              <div class="col-md-10 col-lg-8 col-xl-7">
+                  <div class="post-heading">
+                      <h1>Sales Forecasting</h1>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </header>
+    <!-- End Breadcrumbs -->
+
+  
+    <!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-8 entries">
+
+            <article class="entry entry-single">
+              <h2 class="entry-title">
+                Project Overview
+              </h2>
+
+              <div class="entry-content">
+                <h3>Analysis</h3>
+                <ul>
+                    <li>For most stores, sales have increased between the given time period (2013-2015)</li>
+                    <li>On average, sales are relatively higher when there is a promotion & an "extra" or "extended" type of assortment</li>
+                    <li>Moreover, the area in which the store is located plays an important role on sales. 
+                      Stores located on more populated areas, with higher GDPs, get more sales.</li>
+                    <li>Promotions have a mixed effect on sales. Normal promotions running in a given day seem to increase sales, 
+                      but ongoing promotions (Promo2) seem to be associated with lower sales.</li>
+                </ul>
+                <p>The final model is a RandomForestRegressor with a R2 = 0.903, a RMSE = 960 and a MAE = 646 (based on performance on validation set)</p>
+
+                <h5 style="font-size: 1rem; font-weight:700; padding-top:2%;">Test on Kaggle Competition -late submission</h5>
+                <ul>
+                  <li>As recommended (<a href="https://www.kaggle.com/competitions/rossmann-store-sales/discussion/17601">source</a>), before submitting 
+                    I scaled back sales which did not impact other metrics besides the RMSPE, which decreased</li>
+                  <li>The model gets a public score of 0.11861 but a final score of 0.13248 (best final score in competition: 0.10021 
+                    --<a href="https://www.kaggle.com/competitions/rossmann-store-sales/leaderboard">Leaderboard</a>)</li>
+                </ul>
+
+
+                <h3 style="padding-top: 4%;">Walkthrough</h3>
+                <ul>
+                    <li>Conducted an exploratory data analysis to be able to better understand the data and clean it for future forecasting</li>
+                    <li>Applied an Adfuller statistical test to verify stationarity</li>
+                    <li>Studied differences between the best and worst performing stores</li>
+                    <li> Conducted further analysis thanks to visualizations on 
+                        <a href="https://public.tableau.com/app/profile/paula2733/viz/Sales_16476157430450/SalesReport">Tableau Public</a></li>
+                    <li>Explored different tree-based models and fine-tuned hyperparameters on the best peforming models using 3-fold cross validation with time series split</li>
+                    <li>Applied a preprocessing pipeline to clean validation set to test model performance</li>
+                    <li>Visualized feature importance as well as interpretations with LIME (Local Interpretable Model-agnostic Explanations)</li>
+                    <li>Cleaned and predicted on test data from competition then applied a late submission with final RMSPE score of 0.13248</li>
+                </ul>
+              </div>
+
+              <br>
+                  <!-- ======= Images ======= -->
+                  <section id="portfolio-details" class="portfolio-details">
+                    <div class="container">
+                      <div class="row gy-4">
+
+                        <div class="col-lg-8" style="width:100%!important; margin-top: -2rem;">
+                          <div class="portfolio-details-slider swiper">
+                            <div class="swiper-wrapper align-items-center">
+
+                              <div class="swiper-slide">
+                                <img src="assets/img/portfolio/sales-forecasting/targetDistribution.png" alt="">
+                              </div>
+                              
+                              <div class="swiper-slide">
+                                <img src="assets/img/portfolio/sales-forecasting/Sales2015.png" alt="">
+                              </div>
+
+                              <div class="swiper-slide">
+                                <img src="assets/img/portfolio/sales-forecasting/assortExt.png" alt="">
+                              </div>
+
+                              <div class="swiper-slide">
+                                <img src="assets/img/portfolio/sales-forecasting/stateDensity.png" alt="">
+                              </div>
+
+                              <div class="swiper-slide">
+                                <img src="assets/img/portfolio/sales-forecasting/SalesForecasting.png" alt="">
+                              </div>
+
+                              <div class="swiper-slide">
+                                <img src="assets/img/portfolio/sales-forecasting/TableauDashboard.png" alt="">
+                              </div>
+
+
+
+
+                            </div>
+                            <div class="swiper-pagination"></div>
+                          </div>
+                        </div>
+                        </div>
+                      </section>
+
+            </article><!-- End blog entry -->
+
+
+
+
+          </div><!-- End blog entries list -->
+
+
+
+          <div class="col-lg-4">
+            <div class="sidebar">
+              
+              <div class="portfolio-info">
+                <h3>Project information</h3>
+                <ul>
+                  <li><strong>Category: </strong>Regression <br>(Time-Series Analysis)</li>
+                  
+                  <li><strong>Data: </strong>time-series data from 1115 different stores of the "Rossmann" chain,
+                    as well as additional data related to the stores. 
+                  <a href="https://www.kaggle.com/c/rossmann-store-sales"> (Kaggle)</a></li>  
+
+                  <li><strong>Motivation: </strong>It is important for a business to forecast sales to better anticipate and make better business decisions, 
+                    but even more important it is to understand what impact sales and which stores are performing better/worse</li>
+
+                  <li><strong>Objective: </strong>Gain insights from the data and forecast sales</li>  
+
+                  <li><strong>Main Tools</strong>: Python, Tableau </a></li>
+
+                  <li><strong>Code available on: </strong><a href="https://github.com/pcmaldonado/SalesForecasting">Github</a></li>
+
+                  <li><strong>Sales dashboard: </strong><a href="https://public.tableau.com/app/profile/paula2733/viz/Sales_16476157430450/SalesReport">Tableau Public</a></li>
+                </ul>
+              </div>
+             <!-- End sidebar categories-->
+
+              <br><br>
+
+              <h3 class="sidebar-title">Other Projects</h3>
+              <div class="sidebar-item recent-posts">
+                <div class="post-item clearfix">
+                  <img src="assets/img/portfolio/twitter.jpg" alt="">
+                  <h4><a href="tw-sent-analysis.html">Twitter Sentiment Analysis</a></h4>
+                  <!-- <p style="margin-left: 6rem; font-style: italic;"><small>Python, NLP, BERT, Transformers</small></p> -->
+                </div>
+
+                <div class="post-item clearfix">
+                  <img src="assets/img/portfolio/price-estimator.jpg" alt="">
+                  <h4><a href="price-estimator.html">Price Estimator</a></h4>
+                  <!-- <time datetime="2020-01-01">Jan 1, 2020</time> -->
+                </div>
+
+                <div class="post-item clearfix">
+                  <img src="assets/img/portfolio/imdb-analysis.jpg" alt="">
+                  <h4><a href="imdb-analysis.html">IMDb - <br>Exploratory Data Analysis</a></h4>
+                  <!-- <time datetime="2020-01-01">Jan 1, 2020</time> -->
+                </div>
+<!-- 
+                <div class="post-item clearfix">
+                  <img src="assets/img/blog/blog-recent-4.jpg" alt="">
+                  <h4><a href="blog-single.html">Laborum corporis quo dara net para</a></h4>
+                  <time datetime="2020-01-01">Jan 1, 2020</time>
+                </div>
+
+                <div class="post-item clearfix">
+                  <img src="assets/img/blog/blog-recent-5.jpg" alt="">
+                  <h4><a href="blog-single.html">Et dolores corrupti quae illo quod dolor</a></h4>
+                  <time datetime="2020-01-01">Jan 1, 2020</time>
+                </div> -->
+
+              </div><!-- End sidebar recent posts-->
+
+
+
+            </div><!-- End sidebar -->
+
+          </div><!-- End blog sidebar -->
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Single Section -->
+  </div>
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <!-- <div class="footer-top">
+    </div> -->
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>pcmaldonado 2022</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!--
+        All the links in the footer should remain intact.
+        You can delete the links only if you purchased the pro version.
+        Licensing information: https://bootstrapmade.com/license/
+        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=BizPage
+      -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- Uncomment below i you want to use a preloader -->
+  <!-- <div id="preloader"></div> -->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
