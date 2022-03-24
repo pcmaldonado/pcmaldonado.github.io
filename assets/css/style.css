@@ -152,8 +152,17 @@ h1, h2, h3, h4, h5, h6 {
 #header .logo a {
   color: #fff;
 }
+
 #header .logo img {
   max-height: 40px;
+}
+
+#header .logo img {
+  max-height: 50px;
+}
+
+#header .logo  :hover{
+  color:#18d26e;
 }
 @media (max-width: 992px) {
   #header .logo {
@@ -266,7 +275,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.5s;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 468px) {
   .mobile-nav-toggle {
     display: block;
   }
@@ -754,9 +763,16 @@ section {
 #portfolio .portfolio-wrap {
   box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
   transition: 0.3s;
+  background-color: rgb(255, 255, 255);
+  margin:1rem;
 }
 #portfolio .portfolio-wrap:hover {
   box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.16);
+}
+
+#portfolio .portfolio-wrap .img-fluid {
+  height: 262px;
+  width: 418px;
 }
 
 #portfolio .portfolio-item {
