@@ -1,292 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Customer Churn</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link type="image/png"  href="assets/img/favicon_io/favicon.ico" rel="icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
-   <!-- Google fonts-->
-   <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
- 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: BizPage - v5.8.0
-  * Template URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-</head>
-
-<body>
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center ">
+  <head>
+    <title>Predicting Customer Churn</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <div class="container-fluid">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
 
-      <div class="row justify-content-center align-items-center">
-        <div class="col-xl-11 d-flex align-items-center justify-content-between">
-          <h1 class="logo"><a href="index.html">Portfolio</a></h1>
-          <!-- Uncomment below if you prefer to use an image logo -->
-          <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
 
-          <nav id="navbar" class="navbar">
-            <ul>
-              <li><a class="nav-link scrollto " href="index.html">Home</a></li>
-              <li><a class="nav-link  active" href="projects.html">Projects</a></li>
-              <li><a class="nav-link scrollto" href="about.html">About</a></li>
-            </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
-          </nav><!-- .navbar -->
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+      <!-- Favicons -->
+    <link type="image/png"  href="images/favicon_io/favicon.ico" rel="icon">
+
+  </head>
+  <body>
+
+    <div class="KW_progressContainer">
+      <div class="KW_progressBar">
+
+      </div>
+    </div>
+    <div class="page">
+    <nav id="colorlib-main-nav" role="navigation">
+      <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
+      <div class="js-fullheight colorlib-table">
+      	<div class="colorlib-table-cell js-fullheight">
+          <div class="row no-gutters">
+            <div class="col-md-12 text-center">
+              <ul>
+                <li><a href="index.html"><span>Home</span></a></li>
+                <li><a href="about.html"><span>About</span></a></li>
+                <li class="active"><a href="projects.html"><span>Portfolio</span></a></li>
+                <li><a href="articles.html"><span>Articles</span></a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-
-    </div>
-  </header><!-- End Header -->
-
-  <main id="main">
-  <div class="article">
-    <!-- ======= Breadcrumbs ======= -->
-    <header class="masthead" style="background-image: url('assets/img/portfolio/customer-churn.jpg'); width:100%;">
-      <div class="container position-relative px-4 px-lg-5">
-          <div class="row gx-4 gx-lg-5 justify-content-center">
-              <div class="col-md-10 col-lg-8 col-xl-7">
-                  <div class="post-heading">
-                      <h1>Customer Churn</h1>
-                      <!-- <h2 class="subheading">From data collection to deployment</h2> -->
-                  </div>
+    </nav>
+    
+    <div class="blogpost">
+    <div id="colorlib-page">
+      <header>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="colorlib-navbar-brand">
+                <a class="colorlib-logo" href="index.html">Paula Maldonado</a>
               </div>
+              <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+            </div>
           </div>
-      </div>
-  </header>
-    <!-- End Breadcrumbs -->
+        </div>
+      </header>
 
-  
-    <!-- ======= Blog Single Section ======= -->
-    <section id="blog" class="blog">
-      <div class="container" data-aos="fade-up">
+      <section class="ftco-section">
+        <div class="container mt-5">
+        	<div class="row justify-content-center mb-5 pb-5">
+            <div class="col-md-8 text-center heading-section ftco-animate">
+              <span style="font-size: small; color:rgb(226, 162, 102)">2 min read</span><br><br>
+              <span>Classification Model</span>
+              <h2>Predicting Customer Churn</h2>
+              
+              <img style="border-radius:3%;" src="images/customer-churn/customer-churn.jpg" alt="" class="img-fluid">
+              <p><a href="https://public.tableau.com/app/profile/paula2733/viz/CustomersChurn_16481348425540/CustomerChurn">Tableau Dashboard</a> | 
+              <a href="https://github.com/pcmaldonado/CustomerChurn">GitHub Repository</a></p>
+            </div>
+          </div>
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-10">
+              <h2 class="mb-3">1. Objective</h2>
+              <p>Preventing customer churn is a very important matter for a company, as understanding why customers are leaving allows to make better decisions.
+                Moreover, acquiring new customers can be more expensive than keeping old ones.
+              </p>
+              <p>The objective of this project is to understand why customers may want to leave the company and 
+                to train a ML model able to predict what customers are likely to churn.</p>
+              <p>In this project, I use data from an e-commerce company available on 
+                <a href="https://www.kaggle.com/ankitverma2010/ecommerce-customer-churn-analysis-and-prediction">Kaggle</a>, which contains information on
+              genre, tenure, preferred payment mode, and more, for over 5,600 customers.</p>
+              
+              <h2 class="mb-3">2. Results</h2>  
+              <p>From the conducted analysis, we can conclude the following things:</p>
+              <ul>
+                <li>Customers are more likely to churn when they have not been with the company for a long time (tenure is low) and when there have been complains.</li>
+                <li>Moreover, it seems that single people are also more likely to churn, as well as people from certain city tiers</li>
+                <li>However, customers who mostly purchase from the "Laptop & Accessory category" are les likely to churn</li>
+              </ul>
+              <p>The company should try to better focus on single people, study why certain categories are associated with a higher risk of churn, 
+                as well as see why certain city tiers are more susceptible to churn. In addition, understanding where complaints are coming from could also be helpful.
 
-        <div class="row">
+                By adressing these factors, it is probably that churn would decrease.</p>
 
-          <div class="col-lg-8 entries">
-
-            <article class="entry entry-single">
-              <h2 class="entry-title">
-                Project Overview
-              </h2>
-
-              <div class="entry-content">
-                <h3>Analysis</h3>
+              <h2 class="mb-3">3. Overview</h2>
+              <h4># Preprocessing</h4>
                 <ul>
-                    <li>Customers are more likely to churn when tenure is low, when there have been complains and when they are single</li>
-                    <li>People from certain city tiers are also more likely to churn than others</li>
-                    <li>Buyers who mostly purchase from the Laptop & Accessory category are less likely to churn</li>
+                  <li>Analysed the data (distributions, type of data, missing values) and studied the relationship between the features and the average churn rate of the e-commerce</li>
+                  <li>Preprocessed the data to be able to apply a machine learning model</li>
+                  <li>Used SMOTE to handle imbalanced data</li>
                 </ul>
-                <p>By adressing these factors, (i.e. why does certain categories are associated with higher risk of churn), it is probably that churn would decrease.</p>
+              <h4># Modeling</h4>
+              <!-- <p>The model training included four steps:</p> -->
+              <ul>
+                <li>Studied more than 10 classification algorithms, from simple models like Logistic Regression to ensemble methods like 
+                  Random Forest or XGBoosting as well as combinations of models using Voting classifiers and Stacking classifiers</li>
+                <li>Optimized hyperparameters of the best performing models using 10-fold cross validation</li>
+                <li>Combined the finetuned models using a Voting Classifier and a Stacking Classifier</li>
+                <li>Built a pipeline able to preprocess and predict on new data using a fine-tuned pickled model</li>
+                <li>Used LIME to interpret results</li>
+                <li>Achieved high performance on test data using a Voting Classifier on previously finetuned models:</li>
+              </ul> 
+              <table>
+                <thead>
+                  <tr>
+                  <th>Models</th>
+                  <th>Accuracy</th>
+                  <th>Precision</th>
+                  <th>Recall</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                  <td>Voting Classifier (best overall model)</td>
+                  <td>	97.96%</td>
+                  <td>96.02%</td>
+                  <td>	91.35%</td>
+                  </tr>
+                  <tr>
+                    <td>Extra Trees Classifier
+                      (best individual model)</td>
+                    <td>96.63%</td>
+                    <td>96.82%</td>
+                    <td>82.16%</td>
+                    </tr>
+                </tbody>
+              </table>
+              
+              <br>
 
-                <h3 style="padding-top: 4%;">Walkthrough</h3>
-                <ul>
-                    <li>Analysed the data (distributions, type of data, missing values) and studied the relationship between the features and the average churn rate of the e-commerce</li>
-                    <li>Preprocessed the data to be able to apply a machine learning model and used SMOTE to handle imbalanced data</li>
-                    <li>Studied more than 10 classification algorithms (from Logistic Regression to ensemble methods like Random Forest, XGBoosting, and even Voting Classifiers)</li>
-                    <li>Optimised the hyperparameters from the best performing models using 10-fold cross validation</li>
-                      <ul>
-                        <li>Overall, the model with the best performance was the Voting Classifier based on the 4 best models fine-tuned and which weights were optimized using
-                        cross validation</li>
-                      </ul>
-                    <li>Created a pipeline able to preprocess and predict on new data and used Pickle to import the best model</li>
-                    <li>Used LIME to interpret results</li>
-                </ul>
-              </div>
 
               <br>
-                  <!-- ======= Images ======= -->
-                  <section id="portfolio-details" class="portfolio-details">
-                    <div class="container">
-                      <div class="row gy-4">
+              <h2 class="mb-3">Some images from the project</h2>
+              <!-- ======= Images ======= -->
+              <!-- Container for the image gallery -->
+              <div class="container">
 
-                        <div class="col-lg-8" style="width:100%!important; margin-top: -2rem;">
-                          <div class="portfolio-details-slider swiper">
-                            <div class="swiper-wrapper align-items-center">
+                <!-- Full-width images with number text -->
+                <div class="mySlides">
+                  <div class="numbertext">1 / 7</div>
+                    <img class="demo cursor" src="images/customer-churn/target.png" style="width:88%; margin-left:6%; margin-right:6%; "
+                    alt="Target Distribution" >
+                  </div>
 
-                              <div class="swiper-slide">
-                                <img src="assets/img/portfolio/customer-churn/target.png" alt="">
-                              </div>
-                              
-                              <div class="swiper-slide">
-                                <img src="assets/img/portfolio/customer-churn/complains.png" alt="">
-                              </div>
+                  <div class="mySlides">
+                  <div class="numbertext">2 / 7</div>
+                    <img class="demo cursor" src="images/customer-churn/complains.png" style="width:88%; margin-left:6%; margin-right:6%;"
+                    alt="Customer who have had complains have, on average, higher churn rates" >
+                  </div>
 
-                              <div class="swiper-slide">
-                                <img src="assets/img/portfolio/customer-churn/models-performance.png" alt="">
-                              </div>
+                <div class="mySlides">
+                  <div class="numbertext">3 / 7</div>
+                    <img class="demo cursor" src="images/customer-churn/models-performance.png" style="width:88%; margin-left:6%; margin-right:6%;"
+                    alt="Performance of models using GridSearchCV and 10-fold Cross Validation" >
+                </div>
 
-                              <div class="swiper-slide">
-                                <img src="assets/img/portfolio/customer-churn/conf_matrix.png" alt="">
-                              </div>
+                <div class="mySlides">
+                  <div class="numbertext">4 / 7</div>
+                    <img class="demo cursor" src="images/customer-churn/roc.png" style="width:88%; margin-left:6%; margin-right:6%;"
+                    alt="ROC Curve of best model (Voting Classifier)" >
+                </div>
 
-                              <div class="swiper-slide">
-                                <img src="assets/img/portfolio/customer-churn/roc.png" alt="">
-                              </div>
+                <div class="mySlides">
+                  <div class="numbertext">5 / 7</div>
+                    <img class="demo cursor" src="images/customer-churn/conf_matrix.png" style="width:88%; margin-left:6%; margin-right:6%;"
+                    alt="Confusion Matrix of best model (Voting Classifier)" >
+                </div>
 
-                              <div class="swiper-slide">
-                                <img src="assets/img/portfolio/customer-churn/lime-churn.png" alt="">
-                              </div>
+                <div class="mySlides">
+                  <div class="numbertext">6 / 7</div>
+                    <img class="demo cursor" src="images/customer-churn/lime-churn.png" style="width:88%; margin-left:6%; margin-right:6%;"
+                    alt="Local Explanation for 'Churn' using LIME" >
+                </div>
 
-                              
-                              <div class="swiper-slide">
-                                <img src="assets/img/portfolio/customer-churn.jpg" alt="">
-                              </div>
-
-                            </div>
-                            <div class="swiper-pagination"></div>
-                          </div>
-                        </div>
-                        </div>
-                      </section>
-
-            </article><!-- End blog entry -->
-
-
-
-
-          </div><!-- End blog entries list -->
+                <div class="mySlides">
+                  <div class="numbertext">7 / 7</div>
+                    <img class="demo cursor" src="images/customer-churn/customer-churn.jpg" style="width:88%; margin-left:6%; margin-right:6%;"
+                    alt="Tableau Dashboard that summarizes customer churn trends" >
+                </div>
 
 
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-          <div class="col-lg-4">
-            <div class="sidebar">
-              
-              <div class="portfolio-info">
-                <h3>Project information</h3>
-                <ul>
-                  <li><strong>Category: </strong>Classification</li>
-                  
-                  <li><strong>Data: </strong>It contains information on genre, tenure, preferred payment mode, and more, for over 5,600 customers of an e-commerce company 
-                  <a href="https://www.kaggle.com/ankitverma2010/ecommerce-customer-churn-analysis-and-prediction"> (Kaggle)</a></li>  
+                <!-- Image text -->
+                <div class="caption-container" style="padding-top:2%; width:88%; margin-left:6%; margin-right:6%;">
+                  <p id="caption"></p>
+                </div>
 
-                  <li><strong>Motivation: </strong>it is more expensive to acquire new customers than to keep old ones, thus preventing churn is vital for a company</li>
 
-                  <li><strong>Objective: </strong>Create a ML model able to detect customers likely to churn and understand why they are likely to churn, in order to decrease
-                  churn rate</li>  
 
-                  <li><strong>Main Tools</strong>: Python (Pandas, Sklearn, Matplotlib, Pickle, LIME, SMOTE) </a></li>
 
-                  <li><strong>Code available on: </strong><a href="https://github.com/pcmaldonado/CustomerChurn">Github</a></li>
+                <!-- ADD BUTTON TO SCROLL TO TOP -->
+                <div class="container-button">
+                  <!-- ICON: "Arrow icon by Icons8" <a href="https://icons8.com/"></a> -->
+                  <button onclick="topFunction()" id="myBtn" title="Go to top" class="btn"><img src="images/arrow.png" alt="Arrow"></button>
+                </div>
 
-                  <li><strong>Dashboard: </strong><a href="https://public.tableau.com/app/profile/paula2733/viz/CustomersChurn_16481348425540/CustomerChurn">Tableau Public</a></li>
+
+
+              <!-- <br>
+              <div class="tag-widget post-tag-container mb-5 mt-5">
+                <div class="tagcloud">
+                  <a href="#" class="tag-cloud-link">Machine Learning</a>
+                </div>
+              </div> -->
+          
+            </div>
+        </div>
+      </section>
+      
+      <footer class="ftco-footer ftco-bg-dark ftco-section" style="margin-top:-5%">
+        <div class="container">
+          <div class="row mb-5 justify-content-center">
+            <div class="col-md-5 text-center">
+              <div class="ftco-footer-widget mb-5">
+                <ul class="ftco-footer-social list-unstyled">
+                  <li class="ftco-animate"><a href="https://medium.com/@pcmaldonado"><img src="images/icons8-medium-64 (grey).png"></span></a></li>
+                  <li class="ftco-animate"><a href="https://linkedin.com/in/pcmaldonado"><img src="images/icons8-linkedin-64.png"></span></a></li>
+                  <li class="ftco-animate"><a href="https://github.com/pcmaldonado"><img src="images/icons8-github-64_1.png"></span></a></li>
                 </ul>
               </div>
-             <!-- End sidebar categories-->
+              <!-- <div class="ftco-footer-widget">
+                <h2 class="mb-3">Contact Us</h2>
+                <p class="h3 email"><a href="#">info@email.com</a></p>
+              </div> -->
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 text-center">
 
-              <br><br>
-
-              <h3 class="sidebar-title">Other Projects</h3>
-              <div class="sidebar-item recent-posts">
-                <div class="post-item clearfix">
-                  <img src="assets/img/portfolio/tw-sent-analysis/pos_word_cloud.png" alt="">
-                  <h4><a href="tw-sent-analysis.html">Twitter Sentiment Analysis of a New Video Game</a></h4>
-                  <!-- <p style="margin-left: 6rem; font-style: italic;"><small>Python, NLP, BERT, Transformers</small></p> -->
-                </div>
-
-                <div class="post-item clearfix">
-                  <img src="assets/img/portfolio/price-estimator/price-website.png" alt="">
-                  <h4><a href="price-estimator.html">Building a Car Price Estimator</a></h4>
-                  <!-- <time datetime="2020-01-01">Jan 1, 2020</time> -->
-                </div>
-
-                <div class="post-item clearfix">
-                  <img src="assets/img/portfolio/imdb-analysis/tot_titles_genre_year.gif" alt="">
-                  <h4><a href="imdb-analysis.html">IMDb - <br>Exploratory Data Analysis</a></h4>
-                  <!-- <time datetime="2020-01-01">Jan 1, 2020</time> -->
-                </div>
-
-                <div class="post-item clearfix">
-                  <img src="assets/img/portfolio/BlackBoxArticle.png" alt="">
-                  <h4><a href="https://medium.com/@pcmaldonado/simple-guide-to-interpreting-black-box-models-in-python-5c8bb3b5fcae">Simple Guide to Explainingblack black-box models in Python</a></h4>
-                  <!-- <time datetime="2022-23-03">March 23, 2022</time> -->
-                </div>
-
-                <!-- 
-                <div class="post-item clearfix">
-                  <img src="assets/img/blog/blog-recent-5.jpg" alt="">
-                  <h4><a href="blog-single.html">Et dolores corrupti quae illo quod dolor</a></h4>
-                  <time datetime="2020-01-01">Jan 1, 2020</time>
-                </div> -->
-
-              </div><!-- End sidebar recent posts-->
-
-
-
-            </div><!-- End sidebar -->
-
-          </div><!-- End blog sidebar -->
-
+              <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+      Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true" style="color: red;"></i> by <a href="https://colorlib.com" target="_blank">Colorlib --- <a href="https://colorlib.com" target="_blank">Colorlib</a></a>
+      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            </div>
+          </div>
         </div>
+      </footer>
+
+      <!-- loader -->
+      <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
       </div>
-    </section><!-- End Blog Single Section -->
-  </div>
-  </main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <!-- <div class="footer-top">
-    </div> -->
-
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong>pcmaldonado 2022</strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!--
-        All the links in the footer should remain intact.
-        You can delete the links only if you purchased the pro version.
-        Licensing information: https://bootstrapmade.com/license/
-        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=BizPage
-      -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
     </div>
-  </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-  <!-- Uncomment below i you want to use a preloader -->
-  <!-- <div id="preloader"></div> -->
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-</body>
-
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
+    
+  </body>
 </html>
