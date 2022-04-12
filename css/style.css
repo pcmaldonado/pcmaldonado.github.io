@@ -8977,7 +8977,13 @@ textarea.form-control {
 
 
 /* IN PROJECTS */
+/* It shows button all the time because there is a bug on same pages and otherwise it never shows */
 .btn-projects {
   display: block;
 }
 
+/* Removes focus of the button to avoid a white cercle around it */
+.btn:focus, .btn-projects:focus {
+  outline: none;
+  box-shadow: none;
+}
