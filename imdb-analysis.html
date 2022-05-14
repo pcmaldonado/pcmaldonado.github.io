@@ -76,12 +76,12 @@
         	<div class="row justify-content-center mb-5 pb-5">
             <div class="col-md-8 text-center heading-section ftco-animate">
               <span style="font-size: small; color:rgb(226, 162, 102)">2 min read</span><br><br>
-              <span>SQL, Python and Tableau</span>
+              <span>SSIS, MSSQL, Power BI</span>
               <h2>IMDb Exploratory Data Analysis</h2>
               
               <img style="border-radius:3%;" src="images/imdb-analysis/RelationalDatabaseSchema.png" alt="" class="img-fluid">
-              <p>Dashboards:<a href="https://public.tableau.com/app/profile/paula2733/viz/TopGenreCountryYear/Sheet1"> Genres-Countries</a> & 
-                <a href="https://public.tableau.com/app/profile/paula2733/viz/TopGenreYear/Dashboard_TotNumTitlesGenreYear"> Genres-Time</a> | 
+              
+              <p><a href="https://app.powerbi.com/view?r=eyJrIjoiNThiNDgwZTQtZTExOS00OTE3LThlYzUtNDYxMjIzNDA3ZTMwIiwidCI6ImI4MDhjYjg5LTI5MjItNDgxMC1hNzRjLWNmYzU4NzBjODlhOSJ9&pageName=ReportSection"> Power BI dashboard</a> | 
               <a href="https://github.com/pcmaldonado/IMDb_data_analysis">GitHub Repository</a></p>
             </div>
           </div>
@@ -93,7 +93,8 @@
               
               <h2 class="mb-3">2. Results</h2>  
               <p>IMDb's revenue comes from both advertisers and its paying members (IMDbPro).
-              By exploring the data through queries and code, we can better understand the target audience for these two revenue streams.</p>
+              By exploring the data through SQL queries and visualizations, we can better understand the target audience for these two revenue streams.</p>
+              <p>Based on the data collected through queries, we can say that:</p>
               <b>IMDbPro</b>
               <ul>
                 <li>The target audience for these members is the more than 4 million actors, nearly 1 million different producers, and hundreds of 
@@ -103,14 +104,14 @@
               </ul>
               <b>IMDb</b>
               <ul>
-                  <li>Users of IMDb could also benefit from having a robust rating system. Indeed, as of now, titles with a high number of votes tend to have higher ratings, 
+                  <li>Regular IMDb users could benefit from having a more robust rating system. Indeed, as of now, titles with a high number of votes tend to have higher ratings, 
                       which makes the average title rating relatively high (6.62).</li>
               </ul>
 
               <h2 class="mb-3">3. Overview</h2>
               <h4># Preprocessing</h4>
                 <ul>
-                  <li>Stored the available IMDb database in a local database using MSSQL, Microsoft Visual Studio 2019 and the SSIS toolbox</li>
+                  <li>Using Microsoft Visual Studio 2019 and the SSIS toolbox, stored the available IMDb database in a local MSSQL database as raw data</li>
                   <li>Created new "working" tables through stored procedures in order to better fit the data types and other specifications</li>
                   <li>Tables, rows and columns with too much missing data or not enough meaningful information were discarded</li>
                   <li>Improved data storage by splitting columns and creating new tables to contain only atomic values to normalize the database by following normal forms.</li>
@@ -118,47 +119,22 @@
 
                 <h4># Data Exploration</h4>
                 <ul>
-                  <li>Applied a number of queries to better understand the data using MSSQL and finally save a data extract onto a csv file to do 
-                      further exploration using Python and Tableau</li>
-                  <li>Search for the relationship between votes and ratings, found the bset titles per type, etc.
-                    (more information on <a href="https://github.com/pcmaldonado/IMDb_data_analysis/tree/main/EDA">GitHub</a>)</li>
-                  <li>Built dashboards on Tableau showing the evolution of genre development through time as well as around the globe</li>
+                  <li>Applied a number of queries to better understand the data using MSSQL</li>
+                  <li>Imported the data from the MSSQL Server to Power BI to further explore the data</li>
+                  <li>Built a Power BI dashboard that lets users explore what is popular on IMDb (best genres and title types) and see 
+                    the evolution of genre development through time</li>
               </ul> 
          
 
               <br>
-              <h2 class="mb-3">Some images from the project</h2>
+              <h2 class="mb-3">Power BI Dashboard</h2>
               <!-- ======= Images ======= -->
               <!-- Container for the image gallery -->
               <div class="container">
 
-                <!-- Full-width images with number text -->
-                <div class="mySlides">
-                  <div class="numbertext">1 / 3</div>
-                    <img class="demo cursor" src="images/imdb-analysis/RelationalDatabaseSchema.png" style="width:88%; margin-left:6%; margin-right:6%; "
-                    alt="Relational Database Scheme used to store IMDb datasets" >
-                  </div>
-
-                  <div class="mySlides">
-                  <div class="numbertext">2 / 3</div>
-                    <img class="demo cursor" src="images/imdb-analysis/numVotes_rating.png" style="width:88%; margin-left:6%; margin-right:6%;"
-                    alt="Relationship between Votes and Ratings  (Python)" >
-                  </div>
-
-                <div class="mySlides">
-                  <div class="numbertext">3 / 3</div>
-                    <img class="demo cursor" src="images/imdb-analysis/tot_titles_genre_year.gif" style="width:88%; margin-left:6%; margin-right:6%;"
-                    alt="Dashboard showing the evolution of genres through time (Tableau Public)">
+                <div class="row justify-content-center mb-5 pb-5">
+                  <iframe title="PowerBI" width="88%" height="500" src="https://app.powerbi.com/view?r=eyJrIjoiNThiNDgwZTQtZTExOS00OTE3LThlYzUtNDYxMjIzNDA3ZTMwIiwidCI6ImI4MDhjYjg5LTI5MjItNDgxMC1hNzRjLWNmYzU4NzBjODlhOSJ9&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
                 </div>
-
-
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-                <!-- Image text -->
-                <div class="caption-container" style="padding-top:2%; width:88%; margin-left:6%; margin-right:6%;">
-                  <p id="caption"></p>
                 </div>
 
 
