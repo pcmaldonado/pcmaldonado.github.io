@@ -79,8 +79,9 @@
               <span>Regression - Time-Series</span>
               <h2>Sales Analysis and Forecasting</h2>
               
-              <img style="border-radius:3%;" src="images/sales-forecasting/TableauDashboard.png" alt="" class="img-fluid">
-              <p><a href="https://public.tableau.com/app/profile/paula2733/viz/Sales_16476157430450/SalesReport"> Tableau Dashboard</a> |
+              <!-- <img style="border-radius:3%;" src="images/sales-forecasting/TableauDashboard.png" alt="" class="img-fluid"> -->
+              <iframe title="PowerBI_sales_report" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiMjI1Njk1NzEtMjlhYS00ZjY5LTlhNWQtMmViM2ZjYTE2OGIyIiwidCI6ImI4MDhjYjg5LTI5MjItNDgxMC1hNzRjLWNmYzU4NzBjODlhOSJ9&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
+              <p><a href="https://app.powerbi.com/view?r=eyJrIjoiMjI1Njk1NzEtMjlhYS00ZjY5LTlhNWQtMmViM2ZjYTE2OGIyIiwidCI6ImI4MDhjYjg5LTI5MjItNDgxMC1hNzRjLWNmYzU4NzBjODlhOSJ9&pageName=ReportSection"> Power BI Report</a> |
               <a href="https://github.com/pcmaldonado/SalesForecasting">GitHub Repository</a></p>
             </div>
           </div>
@@ -95,32 +96,36 @@
               
               <p style="font-style:italic">Note: this data was originally used in the context of a Kaggle Competition from 2016</p>
               
-              <h2 class="mb-3">2. Results</h2>  
+              <h2 class="mb-3">2. Insights</h2>  
               <ul>
-                <li>For most stores, sales have increased between the given time period (2013-2015)</li>
-                <li>On average, sales are relatively higher when there is a promotion & an "extra" or "extended" type of assortment</li>
+                <li>On average, sales have increased between the given period (2013-2015) and the month with the most sales is December.</li>
+                <li>On average, sales are relatively higher when there is a promotion & an "extra" or "extended" type of assortment.</li>
                 <li>Moreover, the area in which the store is located plays an important role on sales. Stores located on more populated areas, 
                     with higher GDPs, get more sales.</li>
                 <li>Promotions have a mixed effect on sales. Normal promotions running in a given day seem to increase sales, but ongoing promotions (Promo2) 
                     seem to be associated with lower sales.</li>
               </ul>
+
+
+              <h2 class="mb-3">3. Forecasting Model Results</h2>  
               <p>The final model is a RandomForestRegressor with a R2 = 0.903, a RMSE = 960 and a MAE = 646 (based on performance on validation set)</p>
 
               <b>Test on Kaggle Competion (late submission)</b>
               <ul>
                   <li>As recommended (<a href="https://www.kaggle.com/competitions/rossmann-store-sales/discussion/17601">source</a>), 
                     before submitting I scaled back sales which did not impact other metrics besides the RMSPE, which decreased</li>
-                  <li>The model gets a public score of 0.11861 but a final score of 0.13248 (best final score in competition: 0.10021 
+                  <li>The model gets a public score of 0.11861 on a fraction of the test data, but a final score of 0.13248 on the total of the test data which indicates
+                    some overfitting (best final score in competition: 0.10021 
                       --<a href="https://www.kaggle.com/competitions/rossmann-store-sales/leaderboard">Leaderboard</a>)</li>
               </ul>
 
-              <h2 class="mb-3">3. Overview</h2>
+              <h2 class="mb-3">4. Overview</h2>
               <h4># Preprocessing and EDA</h4>
                 <ul>
-                  <li>Conducted an exploratory data analysis to be able to better understand the data and clean it for future forecasting</li>
+                  <li>Conducted an exploratory data analysis using Python to be able to better understand the data and clean it for future forecasting</li>
                   <li>Applied an Adfuller statistical test to verify stationarity</li>
-                  <li>Studied differences between the best and worst performing stores</li>
-                  <li>Conducted further analysis thanks to visualizations on Tableau Public</li>
+                  <li>Studied differences between the best and worst performing stores on Python</li>
+                  <li>Recreated the preprocessing steps on Power BI using M and DAX, then conducted further analysis on stores performance</li>
               </ul> 
 
               <h4># Modeling</h4>
@@ -168,11 +173,13 @@
                     alt="Sales Forecasting">
                 </div>
 
+
                 <div class="mySlides">
                 <div class="numbertext">6 / 6</div>
-                    <img class="demo cursor" src="images/sales-forecasting/TableauDashboard.png" style="width:88%; margin-left:6%; margin-right:6%;"
-                    alt="Dashboard showing the evolution of genres through time (Tableau Public)">
+                    <img class="demo cursor" src="images/sales-forecasting/KPIs.png" style="width:88%; margin-left:6%; margin-right:6%;"
+                    alt="Key Influencers (Power BI)">
                 </div>
+           
 
                 <!-- Next and previous buttons -->
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
