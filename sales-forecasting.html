@@ -75,7 +75,7 @@
         <div class="container mt-5">
         	<div class="row justify-content-center mb-5 pb-5">
             <div class="col-md-8 text-center heading-section ftco-animate">
-              <span style="font-size: small; color:rgb(226, 162, 102)">2 min read</span><br><br>
+              <span style="font-size: small; color:rgb(226, 162, 102)">3 min read</span><br><br>
               <span>Regression - Time-Series</span>
               <h2>Sales Analysis and Forecasting</h2>
               
@@ -88,26 +88,61 @@
           <div class="row d-flex justify-content-center">
             <div class="col-md-10">
               <h2 class="mb-3">1. Objective</h2>
-              <p>It is important for a business to forecast sales to better anticipate and make better business decisions, 
-                  but even more important it is to understand what impact sales and which stores are performing better or worse</p>
+              <p>Analyzing past sales and being able to forecast future sales are two very important processes for any business, as they allow companies 
+                to make better data-driven decisions.</p>
               <p>The objective of this project is to gain insights from the data and forecast sales</p>
-              <p>For this, I'll use time-series data from 1115 different stores of the "Rossmann" chain, as well as additional data related to the stores 
+              <p>For this, I use time-series data (Jan 2013 - Jul 2015) from 1115 different stores of the "Rossmann" chain, as well as additional data related to the stores 
                   (available on <a href="https://www.kaggle.com/c/rossmann-store-sales">Kaggle</a>).</p>
               
               <p style="font-style:italic">Note: this data was originally used in the context of a Kaggle Competition from 2016</p>
               
-              <h2 class="mb-3">2. Insights</h2>  
+              <h2 class="mb-3">2. Data Analysis</h2>  
+              <p>Data exploration was done using Python but the main analysis of the data was done using Power BI and the results are available as a report.</p>
+              <p>Before starting the analysis, a few dimensions to analyze sales were selected:</p>
+                <ul>
+                  <li>Does time have an impact on sales? (e.g. seasonality)</li>
+                  <li>Do promotions increase sales?</li>
+                  <li>Does stores sales performance vary by state?</li>
+                  <li>What characterizes the best and worst performing stores?</li>
+                </ul>
+
+              <p>From analyzing the data, the following insights were found:</p> 
+              <h4 class="mb-3">2.1 Time</h4>  
+              <!-- <p>From analyzing the data, the following insights were found:</p>  -->
               <ul>
-                <li>On average, sales have increased between the given period (2013-2015) and the month with the most sales is December.</li>
-                <li>Sales are relatively higher when there is a promotion & an "extra" or "extended" type of assortment. The recommendation would be to expand this type
-                  of assortment across all stores after applying a cost-benefit analysis</li>
-                <li>Moreover, the area in which the store is located plays an important role on sales. Stores located on more populated areas, 
-                    with higher GDPs, get more sales. </li>
-                <li>Promotions have a mixed effect on sales. Normal promotions running in a given day seem to increase sales, but ongoing promotions (Promo2) 
-                    seem to be associated with lower sales. The recommendation would be to further analyze why ongoing promotions lower sales and see if 
-                    they are responsible for this or if the problem is an omitted-variable bias.</li>
+                <li>Total sales declined between 2013 and 2014 mostly because there are no registered sales from stores in Bavaria in the second half of 2014. 
+                  This is one of the states that usually have the most sales, and thus, this really impacts global performance.</li>
+                <li>Total sales in 2015 (data available from January through July) have already exceeded 2014 sales, and average sales increased 
+                  between 2013 and 2014 and between 2014 and 2015. </li>
+                <li>Finally, as expected, total and average sales are higher in December.</li>
               </ul>
 
+              <h4 class="mb-3">2.2 Promotions</h4>  
+              <!-- <p>From analyzing the data, the following insights were found:</p>  -->
+              <ul>
+                <li>Promotions have a mixed effect on sales. Normal promotions running in a given day seem to increase sales, but ongoing promotions
+                  seem to be associated with lower sales. </li>
+                <li>In addition, on average, Type "B" stores, which are less frequent and have higher average sales, are the most negatively affected by these ongoing promotions.</li>
+              </ul>
+              <p>Further analysis and additional data are needed to understand why ongoing promotions lower sales.</p>
+              <h4 class="mb-3">2.3 States</h4>  
+              <!-- <p>From analyzing the data, the following insights were found:</p>  -->
+              <ul>
+                <li>There is no clear trend between average sales and States Density or Gross Regional Product (GRP), although there seems to be a 
+                  small positive correlation.</li>
+                <li>The highest average sales are in the two more dense states: Berlin and Hamburg, and the top 4 state is also the one with the highest GRP 
+                  (North Rhine-Westphalia)</li>
+                
+              </ul>
+
+              <h4 class="mb-3">2.4 Stores</h4>  
+              <!-- <p>From analyzing the data, the following insights were found:</p>  -->
+              <ul>
+                <li>As mentioned before, the highest average sales come from "B" type stores. There are only 17 stores of this type among the 1115 total,
+                  and 5 of them are in Berlin. </li>
+                <li>On average, stores with an "Extra" assortment have higher sales. The "Extended" type of assortment also seems to increase sales, 
+                  specially in stores of type "B".</li>
+              </ul>
 
               <h2 class="mb-3">3. Forecasting Model Results</h2>  
               <p>The final model is a RandomForestRegressor with a R2 = 0.903, a RMSE = 960 and a MAE = 646 (based on performance on validation set)</p>
@@ -121,19 +156,19 @@
                       --<a href="https://www.kaggle.com/competitions/rossmann-store-sales/leaderboard">Leaderboard</a>)</li>
               </ul>
 
-              <h2 class="mb-3">4. Overview</h2>
+              <h2 class="mb-3">4. Process</h2>
               <h4># Preprocessing and EDA</h4>
                 <ul>
                   <li>Conducted an exploratory data analysis using Python to be able to better understand the data and clean it for future forecasting</li>
                   <li>Applied an Adfuller statistical test to verify stationarity</li>
                   <li>Studied differences between the best and worst performing stores on Python</li>
-                  <li>Recreated the preprocessing steps on Power BI using M and DAX, then conducted further analysis on stores performance</li>
+                  <li>Recreated the preprocessing steps on Power BI using M and DAX, then conducted further analysis</li>
               </ul> 
 
               <h4># Modeling</h4>
                 <ul>
                   <li>Explored different tree-based models and fine-tuned hyperparameters on the best peforming models using 3-fold cross validation with time series split</li>
-                  <li>Applied a preprocessing pipeline to clean validation set to test model performance</li>
+                  <li>Applied a preprocessing pipeline to clean validation set to evaluate model performance</li>
                   <li>Visualized feature importance as well as interpretations with LIME (Local Interpretable Model-agnostic Explanations)</li>
                   <li>Cleaned and predicted on test data from competition then applied a late submission with final RMSPE score of 0.13248</li>
               </ul> 
@@ -146,38 +181,43 @@
 
                 <!-- Full-width images with number text -->
                 <div class="mySlides">
-                  <div class="numbertext">1 / 6</div>
+                  <div class="numbertext">1 / 7</div>
                     <img class="demo cursor" src="images/sales-forecasting/targetDistribution.png" style="width:88%; margin-left:6%; margin-right:6%; "
                     alt="Target Distribution" >
                   </div>
 
                   <div class="mySlides">
-                  <div class="numbertext">2 / 6</div>
+                  <div class="numbertext">2 / 7</div>
                     <img class="demo cursor" src="images/sales-forecasting/Sales2015.png" style="width:88%; margin-left:6%; margin-right:6%;"
                     alt="Evolution of Sales on 2015" >
                   </div>
 
                 <div class="mySlides">
-                  <div class="numbertext">3 / 6</div>
+                  <div class="numbertext">3 / 7</div>
                     <img class="demo cursor" src="images/sales-forecasting/assortExt.png" style="width:88%; margin-left:6%; margin-right:6%;"
                     alt="Low performing stores seem to have less frequently an 'Extended' Assortment">
                 </div>
 
                 <div class="mySlides">
-                    <div class="numbertext">4 / 6</div>
+                    <div class="numbertext">4 / 7</div>
                       <img class="demo cursor" src="images/sales-forecasting/stateDensity.png" style="width:88%; margin-left:6%; margin-right:6%;"
                       alt="Top Performing Stores are located on High Density Staets">
                 </div>
 
                 <div class="mySlides">
-                <div class="numbertext">5 / 6</div>
+                <div class="numbertext">5 / 7</div>
                     <img class="demo cursor" src="images/sales-forecasting/SalesForecasting.png" style="width:88%; margin-left:6%; margin-right:6%;"
                     alt="Sales Forecasting">
                 </div>
 
+                <div class="mySlides">
+                  <div class="numbertext">6 / 7</div>
+                      <img class="demo cursor" src="images/sales-forecasting/regions.png" style="width:88%; margin-left:6%; margin-right:6%;"
+                      alt="Sales per State (Power BI)">
+                  </div>
 
                 <div class="mySlides">
-                <div class="numbertext">6 / 6</div>
+                <div class="numbertext">7 / 7</div>
                     <img class="demo cursor" src="images/sales-forecasting/KPIs.png" style="width:88%; margin-left:6%; margin-right:6%;"
                     alt="Key Influencers (Power BI)">
                 </div>
